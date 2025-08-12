@@ -45,7 +45,7 @@ A aplicação do LIME revelou a importância da interpretabilidade para além da
 ## 5. Como Executar o Projeto
 
 1.  **Clone o repositório:**
-    `git clone https://github.com/C:\Users\Ola chatinha\OneDrive\Área de Trabalho\Xai-credit-risk-lime/xai-credit-risk-lime.git`
+    https://github.com/Tatysketch/xai-credit-risk-lime/edit/main/README.md
 2.  **Instale as dependências:**
     `pip install -r requirements.txt`
 3.  **Abra o notebook:**
