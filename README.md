@@ -21,7 +21,7 @@ O modelo foi treinado em um conjunto de dados de 700 clientes e testado em 300, 
 
 A seguir, apresentamos um exemplo de como o LIME foi utilizado para explicar a previsão do nosso modelo para um cliente específico. A imagem abaixo mostra a explicação gerada:
 
-![Explicação LIME para um cliente](images/explicacao_cliente_0.png)
+![Explicação LIME para um cliente](explicacao_cliente_0.png)
 
 **Análise da Explicação:**
 
