@@ -13,9 +13,9 @@ O projeto utiliza o dataset **Statlog (German Credit Data)** para simular um cen
 
 Para este problema de classificação, optamos por um modelo **Random Forest Classifier**.
 
-- **Por que escolhemos este modelo?** O Random Forest é um algoritmo de aprendizado de máquina de conjunto (ensemble) que constrói múltiplas árvores de decisão e combina suas previsões para obter um resultado mais robusto e preciso. Ele é conhecido por seu alto desempenho, capacidade de lidar com dados complexos e por ser menos propenso a overfitting.
+- **Por que escolhemos este modelo?** O Random Forest é um algoritmo de aprendizado de máquina de conjunto (ensemble) que constrói múltiplas árvores de decisão e combina suas previsões para obter um resultado mais robusto e preciso. Ele é conhecido por seu alto desempenho, capacidade de lidar com dados complexos e por ser menos propenso a *overfitting*.
 
-O modelo foi treinado em um conjunto de dados de 700 clientes e testado em 300, alcançando uma acurácia de aproximadamente [adicione aqui a acurácia que você obteve, ex: 75%].
+O modelo foi treinado em um conjunto de dados de 700 clientes e testado em 300, alcançando uma acurácia de aproximadamente **77,00%**.
 
 ## 3. Explicações Geradas pelo LIME
 
@@ -23,15 +23,13 @@ A seguir, apresentamos um exemplo de como o LIME foi utilizado para explicar a p
 
 ![Explicação LIME para um cliente](images/explicacao_cliente_0.png)
 
-(Nota: Você pode substituir esta imagem pelo print que você me enviou ou por uma imagem que você mesmo salvou.)
-
 **Análise da Explicação:**
 
-- **Previsão:** O modelo previu que este cliente tem um **Bom Risco** com alta probabilidade.
+- **Previsão do Modelo:** O modelo previu que este cliente tem um **Bom Risco** com alta probabilidade.
 - **Fatores de Influência (Contribuição Positiva):** As características que mais contribuíram para a decisão de "Bom Risco" foram:
-    - `feature_1` com um valor baixo (por exemplo, `< 4.00`). Isso indica que esta característica, se fosse associada a um termo de crédito, foi um forte indicador de bom pagador.
-    - `feature_3` com um valor alto (por exemplo, `> 3.00`). Esta característica também teve um peso significativo na decisão.
-- **Fatores de Influência (Contribuição Negativa):** Embora o modelo tenha aprovado o crédito, a característica `feature_2` (com um valor alto) teve uma pequena contribuição para a previsão de "Mau Risco".
+    - **`feature_1 < 4.00`**: O valor baixo desta característica foi o fator mais forte para o modelo classificar o cliente como de bom risco.
+    - **`feature_3 > 3.00`**: O valor alto desta característica também teve um impacto significativo na previsão de bom risco.
+- **Fatores de Influência (Contribuição Negativa):** Embora o modelo tenha aprovado o crédito, a característica **`feature_2 < 24.00`** teve uma pequena contribuição na direção de "Mau Risco". A decisão final do modelo foi influenciada positivamente pelos outros fatores.
 
 ## 4. Reflexões e Conclusão
 
